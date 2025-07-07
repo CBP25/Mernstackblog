@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+$h1-color: rgb(37, 37, 37);
+$h2-color: rgb(70, 70, 70);
+$nav-bg: rgba(255, 255, 255, 0.76);
+$text-color: #333;
+$hover_nav: rgb(255, 255, 255);
+$hover_nav_bg: $text-color;
+$border-color: rgba(0, 0, 0, 0.2);
+$submit-button-color: $text-color;
+$submit-button-text-color: $hover_nav;
+$submit-button-color-hover: $h2-color;
+$archived-bg: $hover_nav;
+$archived-bg-hover: $h1-color;
+$archived-bg-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$archived-bg-shadow-hover: 0px 0px 12px rgba(0, 0, 0, 0.3);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+//Global H fonts
+
+h1 {
+  color: $h1-color;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+h2 {
+  color: $h2-color;
+}
+
+h3 {
+  color: $h2-color;
+  font-size: 30px;
+}

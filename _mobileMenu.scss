@@ -1,0 +1,87 @@
+@use "_variables" as var;
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.925);
+  display: flex;
+  font-size: 34px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow-y: hidden;
+  z-index: 1000;
+  .logout-btn2 {
+    background-color: var.$hover_nav_bg;
+    color: var.$hover_nav;
+    padding: 20px;
+    font-size: 15px;
+    z-index: 1000;
+
+  }
+  .nav-links {
+    width: 100%;
+    z-index: 1000;
+
+  }
+  .nav-link {
+    font-size: 23px;
+    margin: -10px;
+    width: 100%;
+    z-index: 1000;
+
+  }
+}
+
+.user-section2 {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+
+
+  p {
+    margin-bottom: 1px;
+
+    .profile2 {
+      text-decoration: none;
+      color: var.$text-color;
+      cursor: pointer;
+      z-index: 1000;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.logout-btn2 {
+  background: none;
+  border: none;
+  color: var.$text-color;
+  cursor: pointer;
+  z-index: 1000;
+
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.close-btn{
+    display: block;
+    position: fixed;
+    top: 2vh;
+    right: 5.5vh;
+    font-size: 45px;
+    background: none;
+    border: none;
+    color: var.$text-color;
+    cursor: pointer;
+    z-index: 1000;
+
+}

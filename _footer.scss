@@ -1,0 +1,61 @@
+@use '_variables' as var;
+
+.footer {
+  background: var.$text-color; // Make the entire footer dark
+  padding: 4rem;
+  text-align: center;
+  border-top: 1px solid var.$border-color;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-text {
+    font-size: 16px;
+    color: var.$nav-bg; // Contrast text against dark background
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 10px;
+  }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var.$nav-bg; // Light background for contrast
+    color: var.$text-color;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px; // Rounded square
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: var.$hover_nav_bg;
+      color: var.$hover_nav;
+    }
+  }
+
+  .footer-rights {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var.$nav-bg; // Light text to contrast with dark background
+
+    .footer-rights-text {
+      color: var.$nav-bg;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+
+      }
+    }
+    
+  }
+}

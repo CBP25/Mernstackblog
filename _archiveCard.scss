@@ -1,0 +1,60 @@
+@use "_variables" as var;
+
+.archive-link {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  overflow: hidden;
+  min-height: 50vh;
+  border-radius: 25px;
+  margin: 15px;
+  background-color: var.$archived-bg;
+  box-shadow: var.$archived-bg-shadow;
+  text-align: center;
+
+  text-decoration: none;
+  font-size: 12px;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+  p {
+    padding: 1rem;
+    padding-bottom: 2rem;
+    font-size: 18px;
+    color: var.$text-color;
+  }
+  h3 {
+    color: var.$text-color;
+  }
+  .blog-image-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+
+    .blog-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: opacity 0.3s, transform 0.3s ease-in-out; // Smooth zoom effect
+    }
+  }
+
+  &:hover {
+    box-shadow: var.$archived-bg-shadow-hover;
+    background-color: var.$archived-bg-hover;
+    h3,
+    p {
+      color: var.$hover_nav;
+    }
+
+    .blog-image {
+      transform: scale(1.1); // Zoom in while keeping height
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .archive-link {
+    width: 80vw;
+  }
+}

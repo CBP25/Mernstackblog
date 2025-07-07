@@ -1,0 +1,100 @@
+@use '_variables' as var;
+
+.aboutHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var.$h1-color;
+    min-height: 20vh;
+    padding: 1rem;
+    h1{
+        font-size: 45px;
+        color: var.$nav-bg;
+        text-align: center;
+        text-transform: uppercase;
+    }
+  }
+  .aboutWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+     h2{
+        font-size: 35px;
+        font-weight: normal;
+        text-align: center;
+     }
+    .aboutContent {
+      width: 80vw;
+        .rowabout{
+            display: flex;
+            flex-direction: row;
+            padding: 2rem;
+            align-items: center;
+            p{
+                width: 70vw;
+                padding: 1rem;
+                line-height: 130%;
+            }
+            .larger{
+                font-size: 20px;
+            }
+            .centerP{
+                text-align: center;
+            }
+            .largest{
+                font-size: 18px;
+            }   
+            img{
+                width: 50%;
+                padding: 1rem;
+            }
+        }
+      ul {
+        list-style: none; 
+        padding: 0; 
+  
+        li {
+          a {
+            text-decoration: none;
+            color: var.$h1-color;
+            img{
+                width: 70vw;
+            }
+            &:hover{
+                text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .aboutWrapper {
+        padding: 0;
+      .aboutContent {
+        width: 100vw;
+        .rowabout {
+          flex-direction: column;
+          padding: 1rem;
+          p{
+            width: 90vw;
+            text-align: justify;
+          }
+          .larger, .largest {
+            font-size: 16px;
+          }
+          .centerP{
+            text-align: justify;
+          }
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  

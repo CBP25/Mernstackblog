@@ -1,0 +1,38 @@
+const { MongoClient, ServerApiVersion } = require("mongodb");
+//modify this part based on config.env "./config.env should be similar to the filename"
+require("dotenv").config({ path: "./pass.env" });
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(process.env.ENV_URI, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  },
+});
+
+// connect to database
+let database;
+module.exports = {
+  connectToServer: () => {
+    database = client.db("Blogdata");
+  },
+  getDb: () => {
+    return database;
+  },
+};
+
+/* async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
+ */

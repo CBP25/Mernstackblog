@@ -1,0 +1,93 @@
+@use '_variables' as var;
+
+.banner-container {
+    position: relative;
+    //width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .banner-slider {
+    position: relative;
+    //width: 100%;
+    height: 100%;
+    z-index: -100;
+    background-size: cover;
+    background-position: center;
+    transition: opacity .5s ease-in-out;
+  }
+  
+  // Fade Effects
+  .fade-out {
+    opacity: 0;
+  }
+  .fade-in {
+    opacity: 1;
+  }
+  
+  // Arrow Controls - Initially hidden
+  .arrow-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    transform: translateY(-50%);
+    opacity: 0; // Initially hidden
+    pointer-events: none; // Prevent interaction when hidden
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  // Arrow Buttons
+  .arrow {
+    background: rgba(0, 0, 0, 0.5); // Fading background
+    color: white;
+    padding: 10px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translateY(20px); // Start from below
+    opacity: 0;
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  
+    &.left {
+      border-radius: 10px;
+    }
+  
+    &.right {
+        border-radius: 10px;
+    }
+  }
+  
+  // Show Arrows when Hovering on Banner
+  .banner-container:hover .arrow-controls {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .banner-container:hover .arrow {
+    transform: translateY(0); // Move back up
+    opacity: 1;
+  }
+  
+  // Hide Arrows when Mouse Leaves
+  .banner-container:not(:hover) .arrow {
+    transform: translateY(20px); // Move back down
+    opacity: 0;
+  }
+
+  .z-index-negative {
+    z-index: -100;
+  }
+  
+  @media (max-width: 768px) {
+    .banner-container {
+      height: 50vh;
+    }
+    
+  }

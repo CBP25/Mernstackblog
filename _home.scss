@@ -1,0 +1,149 @@
+@use "_variables" as var;
+
+.homeHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var.$h1-color;
+  min-height: 20vh;
+  padding: 1rem;
+  h1{
+      font-size: 45px;
+      color: var.$nav-bg;
+      text-align: center;
+  }
+  h2{
+    font-size: 30px;
+    color: var.$nav-bg;
+    text-align: center;
+  }   
+}
+.homeHeader2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var.$nav-bg;
+  min-height: 10vh;
+  
+  h2{
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+  }   
+}
+.Main-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   h2{
+    text-align: center;
+    font-size: 35px;
+  }
+}
+.Intro-Container{
+  display: flex;
+  flex-direction: row;
+  max-width: 80vw;
+  padding: 5rem;
+  h2{
+    font-size: 35px;
+    text-align: left;
+  }
+  p{
+    font-size: 20px;
+    padding-right: 5rem;
+  }
+  display: flex;
+  padding: 10vh;
+  align-items: center;
+  justify-content: center;
+  .col{
+    width: 50%;
+    
+  }
+  img{
+    width: 40vw;
+  }
+}
+.Contact-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var.$archived-bg-hover;
+  color: var.$hover_nav;
+  justify-content: center;
+  padding: 5rem;
+  p{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2%;
+    text-align: center;
+    text-align: 100%;
+  }
+  button {
+    width: 20vw;
+    height: 3rem;
+    background: var.$hover_nav;
+    color: var.$archived-bg-hover;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: var.$nav-bg;
+    }
+  }
+}
+.archive-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 5%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.archive-container {
+  display: flex;
+  max-width: 1600px;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: space-around;
+}
+
+@media (max-width: 1000px) {
+  .Intro-Container{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0 5rem 0;
+    h2, p{
+      padding-right: 0;
+      text-align: center;
+    }
+    .col{
+       width: 100vw;
+     
+    }
+    img{
+      margin-top: 1.5rem;
+      width: 80vw;
+    }
+  }
+  .Contact-section{
+    padding: 3rem;
+
+    button{
+      width: 50vw;
+    }
+  }
+  .archive-container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
